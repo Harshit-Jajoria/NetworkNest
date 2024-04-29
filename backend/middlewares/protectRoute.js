@@ -1,5 +1,6 @@
 import User from "../models/userModel.js";
 import jwt from "jsonwebtoken";
+import { JWT_SECRET } from "../utils/constants.js";
 
 const protectRoute = async (req, res, next) => {
 	try {
@@ -7,7 +8,7 @@ const protectRoute = async (req, res, next) => {
 
 		if (!token) return res.status(401).json({ message: "Unauthorized" });
 
-		const decoded = jwt.verify(token, process.env.JWT_SECRET);
+		const decoded = jwt.verify(token, JWT_SECRET);
 
 		const user = await User.findById(decoded.userId).select("-password");
 
