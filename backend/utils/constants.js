@@ -3,3 +3,5 @@ export const PORT=5000
 export const CLOUDINARY_CLOUD_NAME='dyhlm3ikn'
 export const CLOUDINARY_API_KEY='653694334674113'
 export const CLOUDINARY_API_SECRET='wGOpuZsTZRo48axmFQTA2ViTHns'
+export const JWT_SECRET='veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryverysecret'
+
